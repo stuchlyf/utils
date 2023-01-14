@@ -9,7 +9,8 @@ const nextConfig = {
   },
   publicRuntimeConfig: {
     version
-  }
+  },
+  output: 'standalone'
 }
 
 module.exports = nextConfig
