@@ -1,0 +1,19 @@
+name: Docker Image CI
+
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Project Version check (Maven, NodeJS...)
+      uses: avides/actions-project-version-check@v1.3.0
+      id: version_check
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag stuchlyf-utils:${{ steps.version_check.outputs.version }}
