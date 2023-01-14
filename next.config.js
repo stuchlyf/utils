@@ -1,8 +1,15 @@
-/** @type {import('next').NextConfig} */
+const { version } = require('./package.json');
+
+/**
+ * @type {import('next').NextConfig}
+ * */
 const nextConfig = {
   experimental: {
-    appDir: true,
+    appDir: true
   },
+  publicRuntimeConfig: {
+    version
+  }
 }
 
 module.exports = nextConfig
