@@ -17,10 +17,16 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    
+    permissions:
+      contents: read
+      packages: write
+      
     steps:
     # Checkout Project
     - name: checkout
       uses: actions/checkout@v3
+      
     # Get the Version of the Project from package.json
     - name: version check
       uses: avides/actions-project-version-check@v1.3.0
