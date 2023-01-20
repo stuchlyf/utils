@@ -21,15 +21,25 @@ export default function Head() {
       <meta name="msapplication-tap-highlight" content="no" />
       <meta name="theme-color" content="#000000" />
 
+      {/*@ts-ignore*/}
       <link precedence='default' rel="apple-touch-icon" href="/icons/touch-icon-iphone.png" />
+      {/*@ts-ignore*/}
       <link precedence='default' rel="apple-touch-icon" sizes="152x152" href="/icons/touch-icon-ipad.png" />
+      {/*@ts-ignore*/}
       <link precedence='default' rel="apple-touch-icon" sizes="180x180" href="/icons/touch-icon-iphone-retina.png" />
+      {/*@ts-ignore*/}
       <link precedence='default' rel="apple-touch-icon" sizes="167x167" href="/icons/touch-icon-ipad-retina.png" />
+      {/*@ts-ignore*/}
       <link precedence='default' rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
+      {/*@ts-ignore*/}
       <link precedence='default' rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
+      {/*@ts-ignore*/}
       <link precedence='default' rel="manifest" href="/manifest.json" />
+      {/*@ts-ignore*/}
       <link precedence='default' rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5" />
+      {/*@ts-ignore*/}
       <link precedence='default' rel="shortcut icon" href="/favicon.ico" />
+      {/*@ts-ignore*/}
       <link precedence='default' rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
 
       <meta name="twitter:card" content="summary" />
@@ -44,7 +54,6 @@ export default function Head() {
       <meta property="og:site_name" content="PWA App" />
       <meta property="og:url" content="https://yourdomain.com" />
       <meta property="og:image" content="https://yourdomain.com/icons/apple-touch-icon.png" />
-
     </>
   )
 }
