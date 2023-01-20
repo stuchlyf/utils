@@ -1,7 +1,12 @@
 "use client";
 import './globals.css'
-import React, {ReactNode} from "react";
+import React, {ReactNode, useEffect} from "react";
 import {Header} from "@/components/header/header";
+import {Inter} from "@next/font/google";
+import Link from "next/link";
+import {themeChange} from 'theme-change'
+
+const inter = Inter({subsets: ['latin']});
 
 export default function RootLayout({
   children,
@@ -13,6 +18,10 @@ export default function RootLayout({
   const toggleDrawer = () => {
     setDrawerOpen(!drawerOpen);
   }
+
+  useEffect(() => {
+    themeChange(false);
+  }, [])
 
   return (
     <html lang="en">
@@ -32,7 +41,10 @@ export default function RootLayout({
             <label htmlFor="menu-drawer" className={'drawer-overlay'} onClick={toggleDrawer}></label>
             <ul className={'menu p-4 w-80 bg-base-100 text-base-content'}>
               <li>
-                <a href="/css-unit-converter">CSS Unit Converter</a>
+                <Link href="/css-unit-converter">CSS Unit Converter</Link>
+              </li>
+              <li>
+                <Link href="/base64-tool">Base64 Tool</Link>
               </li>
             </ul>
           </div>

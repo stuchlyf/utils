@@ -1,0 +1,11 @@
+{
+  "name": "utils.stuchlyf.ml",
+  "short_name": "utils",
+  "description": "Utilities for Web Developers",
+  "theme_color": "#fff",
+  "background_color": "#fff",
+  "display": "standalone",
+  "orientation": "landscape",
+  "scope": "/",
+  "start_url": "/"
+}

@@ -6,12 +6,11 @@ import {Label} from "@/components/label/label";
 import {
   ChangeEventHandler,
   Dispatch,
-  SetStateAction, useEffect, useMemo,
+  SetStateAction, useEffect,
   useState
 } from "react";
 import {InputGroup} from "@/components/inputGroup/inputGroup";
 
-const inter = Inter({subsets: ['latin']});
 type StateSetterType<T> = Dispatch<SetStateAction<T>>
 type Unit = {
   label: string,

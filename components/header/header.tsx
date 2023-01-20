@@ -4,6 +4,9 @@ import utilsLogo from '../../public/utils-logo.svg';
 import {Button} from "@/components/button/button";
 import {IonIcon} from '@ionic/react';
 import {Navbar} from "@/components/navbar/navbar";
+import {Select} from "@/components/select/select";
+// @ts-ignore
+import {daisyui} from 'tailwind.config';
 
 export interface HeaderProps {
 	onDrawerToggle: () => void;
@@ -27,6 +30,14 @@ export const Header: React.FC<HeaderProps> = ({onDrawerToggle: handleDrawerToggl
 						height={36}
 					/>
 				</Button>
+				 <Select className={'select-bordered'}>
+					<option value={''}>default</option>
+					{daisyui.themes.map((theme: string) => (
+						<option key={theme} value={theme}>
+							{theme}
+						</option>
+					))}
+				</Select>
 			</Navbar>
 		</header>
 	)
